@@ -46,7 +46,10 @@ For information about the AWS CLI, Tools for Windows PowerShell, and API command
        },
        {
          "Effect": "Allow",
-         "Action": "iam:ChangePassword",
+         "Action": [
+            "iam:ChangePassword",
+            "iam:GetLoginProfile"
+         ],
          "Resource": "arn:aws:iam::account-id-without-hyphens:user/${aws:username}"
        }
      ]
